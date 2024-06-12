@@ -1,7 +1,7 @@
 
 function init() {
 
-    var url = "/globe/g10g1";
+    var url = "../globe/g10g1";
     
     fetch(url, {
         headers: {
