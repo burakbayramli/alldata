@@ -57,6 +57,8 @@ function chunkByte (idx) {
 }
 
 async function get_data(x,y) {
+    var lat = 40.224046242331084;
+    var lon = 28.903795822776235;
     z = [];
     var fileEntry= findFile(lon, lat);
     var totalBytes = fileEntry.columns * fileEntry.rows * 2;
