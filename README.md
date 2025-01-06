@@ -30,8 +30,8 @@ updates a polygon.io api key is needed, place the key in the
 appropriate place, and call `spy.get_day` for that day.
 
 In order to load the incremental CSV files into db for a whole month,
-run `spy.db_load_inc` with `year/month` combination passed as
-parameters.
+we run `spy.db_load_inc` with `year/month` combination passed as
+parameters. See the code for examples and further commentary.
 
 ## TODO
 
