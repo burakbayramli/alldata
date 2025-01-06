@@ -8,7 +8,9 @@ All large data that I use for my personal projects.
   for years between 2010-2024.
 
 * Data for certain blocks from GLOBE elevation data, https://www.ngdc.noaa.gov/mgg/topo/gltiles.html.
-  Sample Javascript (Node) code is in `showelev.js`. To run execute `node showelev.js`
+  Sample Javascript (Node) code is in `showelev.js`. To run execute `node showelev.js`.
+  In order to see how this data can be used via Web, see my Github project
+  `burakbayramli.github.com/elev/elev.js`. 
 
 * Search index files for my blog under https://burakbayramli.github.io/
 
