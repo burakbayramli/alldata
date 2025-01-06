@@ -3,7 +3,7 @@ import pandas as pd, datetime, numpy as np, glob, json
 from random import randint
 from time import sleep
 
-DATA = "."
+DATA = "/opt/Downloads/alldata/bist/"
 
 def get_since_2010():
     tickers_df = pd.read_csv(DATA + "/bist-tickers.csv")
