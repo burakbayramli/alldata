@@ -4,28 +4,30 @@ All large data that I use for my personal projects.
 
 ## Features
 
-* BIST 100, Istanbul Stock Exchange top 100 stock day closing values,
-  for years between 2010-2024.
+* BIST 100, Istanbul Stock Exchange top 100 stock end-of-day closing
+  values in CSV files, for years between 2010-2024.
 
-* Data for certain blocks from GLOBE elevation data, https://www.ngdc.noaa.gov/mgg/topo/gltiles.html.
-  Sample Javascript (Node) code is in `showelev.js`. To run execute `node showelev.js`.
-  In order to see how this data can be used via Web, see my Github project
-  `burakbayramli.github.com/elev/elev.js`. 
+* Data for certain blocks from GLOBE elevation data,
+  https://www.ngdc.noaa.gov/mgg/topo/gltiles.html.  Sample Javascript
+  (Node) code is in `showelev.js`. To run execute `node showelev.js`.
+  In order to see how this data can be used via Web, see my Github
+  project `burakbayramli.github.com/elev/elev.js`.
 
-* Search index files under `skidx` for my blog under https://burakbayramli.github.io/
+* Search index files under `skidx` for my blog under
+  https://burakbayramli.github.io/
 
-* SP 500 daily close values starting from 2010, kept up-to-date,
-  updates for each day go under year/month directory as a seperate CSV
-  file, they can be incrementally loaded into the sqlite database
+* SP 500 end-of-day close values in CSV, starting from
+  2010. Incremental files are available, we keep this data up-to-date,
+  new data for each day go under year/month directory as a seperate
+  CSV file. They can be incrementally loaded into the sqlite database
   via a helper function.
 
 Data for both BIST and SP 500 are loaded in two stages, see
-`bist/bist.py` and `sp500/spy.py` for details.
-
-For example `spy.db_create` will create the initial sqlite database
-for SP 500 data, `spy.db_load_2010` will load all data under `2010`
-folder. For updates get a polygon.io key, place it in the appropriate
-place, and call `spy.get_day` for that day.
+`bist/bist.py` and `sp500/spy.py` for details. For example
+`spy.db_create` will create the initial sqlite database for SP 500
+data, `spy.db_load_2010` will load all data under `2010` folder. For
+updates get a polygon.io key, place it in the appropriate place, and
+call `spy.get_day` for that day.
 
 In order to load the incremental CSV files into db for a whole month,
 run `spy.db_load_inc` with `year/month` combination passed as
