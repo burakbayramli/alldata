@@ -26,8 +26,8 @@ Data for both BIST and SP 500 are loaded in to sqlite databas in two
 stages, see `bist/bist.py` and `sp500/spy.py` for details. For example
 `spy.db_create` will create the initial sqlite database for SP 500
 data, `spy.db_load_2010` will load all data under `2010` folder. For
-updates get a polygon.io key, place it in the appropriate place, and
-call `spy.get_day` for that day.
+updates a polygon.io api key is needed, place the key in the
+appropriate place, and call `spy.get_day` for that day.
 
 In order to load the incremental CSV files into db for a whole month,
 run `spy.db_load_inc` with `year/month` combination passed as
