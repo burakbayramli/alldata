@@ -30,5 +30,5 @@ In order to load the incremental CSV files for a whole month, run
 
 ## TODO
 
-- An easy way to update BIST 100 data would be nice.
+- An easy way to retrieve BIST 100 daily data would be nice.
 
