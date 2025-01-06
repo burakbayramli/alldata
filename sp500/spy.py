@@ -3,12 +3,15 @@ import pandas as pd, datetime, numpy as np, glob
 from random import randint
 from time import sleep
 
+# change this to fit your own data location, it needs to point to the directory
+# to the location of the sqlite DB file
 DATA = "/opt/Downloads/alldata/sp500"
 
-DAY_URL = "https://api.polygon.io/v2/aggs/grouped/locale/us/market/stocks/%s?adjusted=true&apiKey=%s"
-
-# place your Polygon.io key inside a JSON, key is polygon, value is your polygon pass
+# place your Polygon.io key inside a JSON conf file, key is 'polygon', value
+# is your polygon password
 params = json.loads(open(os.environ['HOME'] + "/.nomterr.conf").read())
+
+DAY_URL = "https://api.polygon.io/v2/aggs/grouped/locale/us/market/stocks/%s?adjusted=true&apiKey=%s"
 
 def get_spy_tickers():
     link = ("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies#S&P_500_component_stocks")
