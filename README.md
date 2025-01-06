@@ -22,8 +22,8 @@ All large data that I use for my personal projects.
   CSV file. They can be incrementally loaded into the sqlite database
   via a helper function.
 
-Data for both BIST and SP 500 are loaded in two stages, see
-`bist/bist.py` and `sp500/spy.py` for details. For example
+Data for both BIST and SP 500 are loaded in to sqlite databas in two
+stages, see `bist/bist.py` and `sp500/spy.py` for details. For example
 `spy.db_create` will create the initial sqlite database for SP 500
 data, `spy.db_load_2010` will load all data under `2010` folder. For
 updates get a polygon.io key, place it in the appropriate place, and
