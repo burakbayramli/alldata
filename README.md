@@ -2,6 +2,8 @@
 
 All large data that I use for my personal projects.
 
+## Features
+
 * BIST 100, Istanbul Stock Exchange top 100 stock day closing values,
   for years between 2010-2024.
 
@@ -20,3 +22,8 @@ sqlite database, `db_load_2010` will load all data under `2010` folder. For
 updates get a Polygon.io key, and call `get_day` for that day. In order to
 load the incremental CSV files for a whole month, run `db_load_inc` with
 `year/month` combination.
+
+## TODO
+
+- An easy way to update BIST 100 data would be nice.
+
