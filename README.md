@@ -12,25 +12,31 @@ All large data that I use for my personal projects.
   In order to see how this data can be used via Web, see my Github project
   `burakbayramli.github.com/elev/elev.js`. 
 
-* Search index files for my blog under https://burakbayramli.github.io/
+* Search index files under `skidx` for my blog under https://burakbayramli.github.io/
 
 * SP 500 daily close values starting from 2010, kept up-to-date,
   updates for each day go under year/month directory as a seperate CSV
-  file.
-
+  file, they can be incrementally loaded into the sqlite database
+  via a helper function.
 
 Data for both BIST and SP 500 are loaded in two stages, see
 `bist/bist.py` and `sp500/spy.py` for details.
 
-For example `spy.db_create` will create the initial sqlite database,
-`spy.db_load_2010` will load all data under `2010` folder. For updates
-get a Polygon.io key, place it in the appropriate place, and call
-`spy.get_day` for that day.
+For example `spy.db_create` will create the initial sqlite database
+for SP 500 data, `spy.db_load_2010` will load all data under `2010`
+folder. For updates get a polygon.io key, place it in the appropriate
+place, and call `spy.get_day` for that day.
 
-In order to load the incremental CSV files for a whole month, run
-`spy.db_load_inc` with `year/month` combination.
+In order to load the incremental CSV files into db for a whole month,
+run `spy.db_load_inc` with `year/month` combination passed as
+parameters.
 
 ## TODO
 
-- An easy way to retrieve BIST 100 daily data would be nice.
-
+- An easy way to retrieve BIST 100 daily quote data would be nice.
+  Polygon.io has this feature for SP 500, one call a single JSON for
+  an entire day for multiple stocks, I have not seen the equivalent
+  for BIST. If someone can find it, please load up those CSV files in
+  your branch, and submit a PR with the accompanying code, it will be
+  merged. Relying on freemium services that require an API key (such
+  as polygon.io) is not a problem.
