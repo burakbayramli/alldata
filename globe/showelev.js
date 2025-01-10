@@ -23,11 +23,11 @@ function findFile( lng, lat ) {
 
 function fileIndex( lng, lat, fileEntry, resolution ) {
     var column= Math.floor(lng * resolution);
-    console.log('col',column)
     var row= Math.floor(lat * resolution);
     var rowIndex= row - fileEntry.latMin * resolution;
     var columnIndex= column - fileEntry.lngMin * resolution;
     var index= ((fileEntry.rows - rowIndex - 1) * fileEntry.columns + columnIndex) * 2;
+    console.log(index);
     return index;
 };
 
