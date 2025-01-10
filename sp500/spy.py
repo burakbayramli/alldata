@@ -108,5 +108,5 @@ if __name__ == "__main__":
     #db_load_2010()
     #db_load_inc("2024/12")
     #get_since_2010()
-    get_day("2025-01-03")
+    get_day("2025-01-09")
     pass

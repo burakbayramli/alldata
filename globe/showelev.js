@@ -23,8 +23,8 @@ function findFile( lng, lat ) {
 
 function fileIndex( lng, lat, fileEntry, resolution ) {
     var column= Math.floor(lng * resolution);
+    console.log('col',column)
     var row= Math.floor(lat * resolution);
-
     var rowIndex= row - fileEntry.latMin * resolution;
     var columnIndex= column - fileEntry.lngMin * resolution;
     var index= ((fileEntry.rows - rowIndex - 1) * fileEntry.columns + columnIndex) * 2;
@@ -57,6 +57,8 @@ function getElevation( lng, lat, onError ) {
 
 // 40.24157520289902, 28.903099362154144 - 66
 // 40.26766536150578, 28.93888732350262 - 75
-var res = getElevation(28.903099362154144,40.24157520289902);
+// var res = getElevation(28.903099362154144,40.24157520289902);
+
+var res = fileIndex(28.903099362154144,40.24157520289902,dataFiles[0],120);
 
 console.log(res);
