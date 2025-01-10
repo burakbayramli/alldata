@@ -25,12 +25,12 @@ def fileIndex(lng,lat,fileEntry):
     index= ((fileEntry['rows'] - rowIndex - 1) * fileEntry['columns'] + columnIndex) * 2;
     return index
 
-def getElevation(lng, lat, findex):
+def getElevation(lat, lng, findex):
     idx = fileIndex(lng, lat, dataFiles[findex]);
     val = readNumberFromFile(dataFiles[findex]['name'],idx)
     return val
 
-val = getElevation(28.903099362154144,40.24157520289902,0)
+val = getElevation(40.24157520289902,28.903099362154144,0)
 print (val)
-val = getElevation(40.26766536150578, 28.93888732350262,0)
+val = getElevation(28.93888732350262,40.26766536150578,0)
 print (val)
