@@ -7,7 +7,7 @@ All large data that I use for my personal projects.
 * BIST 100, Istanbul Stock Exchange top 100 stock end-of-day closing
   values in CSV files, for years between 2010-2024.
 
-* Data for certain blocks from GLOBE elevation data,
+* Data for a couple of blocks from GLOBE elevation data,
   https://www.ngdc.noaa.gov/mgg/topo/gltiles.html.  Sample Javascript
   (Node) code is in `showelev.js`. To run execute `node showelev.js`.
   In order to see how this data can be used via Web, see my Github
