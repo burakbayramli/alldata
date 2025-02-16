@@ -106,7 +106,7 @@ def get_db_tickers(year, tickers):
 if __name__ == "__main__": 
     #db_create()
     #db_load_2010()
-    #db_load_inc("2025/01")
+    db_load_inc("2025/02")
     #get_since_2010()
-    get_day("2025-01-31") 
+    #get_day("2025-02-14") 
     pass
